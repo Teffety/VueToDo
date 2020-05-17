@@ -92,10 +92,14 @@ export default {
         }
     },
     mounted(){
-        if(this.item === undefined) this.selectValue = this.baseMessage
+        if(this.item === undefined)     this.selectValue = this.baseMessage
         else {
-            if(this.item.type =='group') this.value = this.item.name
+            if(this.item.type =='group') {
+                this.choosingType.choosing = 0
+                this.value = this.item.name
+            }
             else {
+                this.choosingType.choosing = 1
                 this.value = this.item.text;
                 this.selectObj = this.item.group
                 if(this.item.group === undefined) this.selectValue = this.baseMessage
