@@ -59,7 +59,7 @@ $colorGreen: rgb(107, 212, 93);
     text-overflow: ellipsis;
     white-space: nowrap;
     p{
-        cursor: move;
+        cursor: pointer;
     }
     &-ready{
         text-decoration: line-through $colorGreen;

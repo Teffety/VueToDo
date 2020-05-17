@@ -7,7 +7,7 @@
 
             <template v-if="remove">
                 <div class="modal__block-delete">
-                    <div class="modal__block-delete__info"> Do you want to delete {{item.type}} where info {{item.name}}?</div>
+                    <div class="modal__block-delete__info"> Do you want to delete {{item.type}}?</div>
                     <div class="modal__block-delete__action">
                         <button class="modal__block-delete__btn" @click="removeFunction(item)">
                             Remove {{item.type}}
@@ -235,6 +235,17 @@ $colorMain: rgb(204, 204, 204);
             height: calc(100% - 20px);
             margin:15px auto 5px;
             overflow: auto;
+        }
+        &-delete{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            width: 100%;
+            height: 100%;
+            & > div{
+                margin: 10px 0px;
+            }
         }
     }
 }
